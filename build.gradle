@@ -1,0 +1,21 @@
+plugins {
+    id 'java'
+}
+
+group 'org.dineshv'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation group: 'org.testng', name: 'testng', version: '6.14.3'
+    testImplementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '3.141.59'
+}
+
+test {
+    useTestNG{
+        suites 'src/test/resources/testng.xml'
+    }
+}
